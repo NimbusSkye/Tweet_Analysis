@@ -18,6 +18,8 @@ posts['coding']=''*len(tweets)
 for tweet in tweets:
     posts['id'].append('"'+tweet['data']['id']+'"')
     format_text=tweet['data']['text'].translate({ord('"'):"'",ord('\n'):''})
+    format_text=format_text.encode('ascii','ignore')
+    format_text=format_text.decode()
     posts['text'].append(format_text)
         
 df=pd.DataFrame(posts)
