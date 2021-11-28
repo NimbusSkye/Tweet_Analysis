@@ -9,7 +9,7 @@ import json
 # This is our template for data collection.
 # Just replace the authentication part and tweak to the rules to match our desired filter
 
-bearer_token = os.environ.get("BEARER_TOKEN")
+bearer_token = 'put your bearer token here'
 
 
 def bearer_oauth(r):
@@ -57,8 +57,9 @@ def delete_all_rules(rules):
 def set_rules(delete):
     # You can adjust the rules if needed
     sample_rules = [
-        {"value": "dog has:images", "tag": "dog pictures"},
-        {"value": "cat has:images -grumpy", "tag": "cat pictures"},
+        {"value": "covid -is:retweet lang:en -is:reply -is:quote", "tag": "covid"},
+        {"value": "vaccination -is:retweet lang:en -is:reply -is:quote", "tag": "vaccination"},
+        {"value": "(moderna OR pfizer OR comirnaty OR sinovac OR astrazeneca) -is:retweet lang:en -is:reply -is:quote", "tag": "vaccine names"}
     ]
     payload = {"add": sample_rules}
     response = requests.post(
@@ -74,6 +75,8 @@ def set_rules(delete):
 
 
 def get_stream(set):
+    counter=0
+    list_tweets=[]
     response = requests.get(
         "https://api.twitter.com/2/tweets/search/stream", auth=bearer_oauth, stream=True,
     )
@@ -85,9 +88,15 @@ def get_stream(set):
             )
         )
     for response_line in response.iter_lines():
+        if counter>10:
+            break
         if response_line:
+            counter+=1
             json_response = json.loads(response_line)
-            print(json.dumps(json_response, indent=4, sort_keys=True))
+            list_tweets.append(json_response)
+            # print(json.dumps(json_response, indent=4, sort_keys=True))
+    with open('sample.json','w') as f:
+        json.dump(list_tweets,f)
 
 
 def main():
