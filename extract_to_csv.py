@@ -13,7 +13,8 @@ with open(jsonf,'r') as f:
     tweets=json.load(f)
 
 posts={col:[] for col in ['id','text']}
-posts['coding']=''*len(tweets)
+posts['coding']=['']*len(tweets)
+posts['sentiment']=['']*len(tweets)
 
 for tweet in tweets:
     posts['id'].append('"'+tweet['data']['id']+'"')

@@ -57,8 +57,8 @@ def delete_all_rules(rules):
 def set_rules(delete):
     # You can adjust the rules if needed
     sample_rules = [
-        {"value": "covid -is:retweet lang:en -is:reply -is:quote", "tag": "covid"},
-        {"value": "vaccination -is:retweet lang:en -is:reply -is:quote", "tag": "vaccination"},
+        {"value": "(covid OR coronavirus) -is:retweet lang:en -is:reply -is:quote", "tag": "covid"},
+        {"value": "(vaccination OR vaccine) -is:retweet lang:en -is:reply -is:quote", "tag": "vaccination"},
         {"value": "(moderna OR pfizer OR comirnaty OR sinovac OR astrazeneca) -is:retweet lang:en -is:reply -is:quote", "tag": "vaccine names"}
     ]
     payload = {"add": sample_rules}
@@ -88,7 +88,7 @@ def get_stream(set):
             )
         )
     for response_line in response.iter_lines():
-        if counter>10:
+        if counter>1000:
             break
         if response_line:
             counter+=1
