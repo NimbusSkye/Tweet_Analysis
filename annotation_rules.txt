@@ -1,0 +1,35 @@
+Medical Vaccine discussion - mv
+Valid reason for hesitancy (People who have disorders, asthma, etc.)
+Also discussion on effectiveness of the vaccine
+
+Political Vaccine discussion - pv
+Debatable reasoning (my body my choice, freedome, vaccine and mask mandates)
+
+General Vaccine Discussion - gv
+Anything that is not medical or politcal relating to the vaccine
+Ex: I like pfizer over moderna
+Ex: I just heard someone talk about the vaccine for an hour
+
+Comedy/Satire - c
+Which tweets are contributing real value or not 
+The topic in a comedic discussion does not add value all the time
+
+Political Covid/Non-Vaccine related discussion - pc
+Non Vaccine related politics
+Masks/Distancing etc
+    
+Covid specific discourse - cd
+What are people talking about covid
+We are interested in all debate about covid as well
+Vaccine categories take precedence in case of overlap
+
+Covid and vacc Statistics and developments - cs
+Plain stats about covid 
+also gives us an impression of what the public thinks the stats are
+In a real world situation, can use this data to cross check with facts 
+How high covid rates affects the economy and the individual
+
+Health Impact of being infected with covid - h
+Understanding reasons for actually taking the vaccine
+Side effects of vaccine may not be nearly as bad as the impact covid has
+Data helps push for vaccinations with facts and reasoning
