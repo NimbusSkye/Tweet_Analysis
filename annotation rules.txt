@@ -1,0 +1,15 @@
+p positive
+x neutral
+n negative
+
+v vaccine
+p policies
+h health
+pe personal opinion
+op opinion piece (article)
+c comedy
+s stats
+n news
+ot other
+
+define +/- as sentiment about govt response/policy
