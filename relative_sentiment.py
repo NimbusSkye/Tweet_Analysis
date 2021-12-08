@@ -13,7 +13,7 @@ def main():
    # annotations = "annotated_800_hamza.csv"
     anno_df_1 = pd.read_csv(annotations)
 
-    tags = ["mv", "gv", "pv", "pc", "cd", "c", "h", "cs"]
+    tags = ["mv", "gv", "pv", "pc", "cd", "cs", "cs","ot"]
     sent = ["p","n","x"]
     dict ={}
 
