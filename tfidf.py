@@ -5,7 +5,7 @@ import math
 
 def compile_words(csv):
     df=pd.read_csv(csv,usecols=[1,2],dtype=str)
-    categories = ['mv','pv','gv','c','pc','cd','cs','h','ot']
+    categories = ['mv','pv','gv','c','pc','cd','cs','ot']
     result = {category:{} for category in categories}
 
     stopwords=[]
@@ -54,7 +54,7 @@ def compute_lang(counts):
             idf[word]+=1
 
     for word in idf:
-        idf[word]=math.log10(6/idf[word])
+        idf[word]=math.log10(8/idf[word])
 
     tfidf=counts
 
