@@ -13,7 +13,7 @@ for (i in 1:8) {
     geom_bar(stat='identity') +
     ggtitle(paste("Top words in",cats[i])) +
     ylab("word") + 
-    theme_grey(base_size=14)
+    theme_grey(base_size=17)
 }
 
 grid.arrange(grobs=p,ncol=2)
