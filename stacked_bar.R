@@ -18,4 +18,4 @@ ggplot(sentiment_by_coding, aes(x=coding, y=n, fill=sentiment)) +
   ggtitle("Sentiments by Category") +
   labs(fill='Sentiment') +
   geom_text(aes(label = paste0(percent*100,"%")), 
-           position = position_stack(vjust = 0.5), size = 2)
+           position = position_stack(vjust = 0.5), size = 5)
