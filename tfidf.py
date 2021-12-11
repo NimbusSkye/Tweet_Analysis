@@ -3,9 +3,10 @@ import sys
 import json
 import math
 
+categories = ['mv','pv','gv','c','pc','cd','cs','ot']
+
 def compile_words(csv):
     df=pd.read_csv(csv,usecols=[1,2],dtype=str)
-    categories = ['mv','pv','gv','c','pc','cd','cs','ot']
     result = {category:{} for category in categories}
 
     stopwords=[]
@@ -75,10 +76,26 @@ def main():
         json.dump(wcounts,out,indent=4)
 
     tfidf=compute_lang(wcounts)
+    coding=[]
+    for cat in categories:
+        coding+=[cat]*10
+    words=[]
+    vals=[]
+    vals=[]
+    
     for char in tfidf:
-        tfidf[char]=sorted(tfidf[char],key=tfidf[char].get,reverse=True)[:10]
+        words+=sorted(tfidf[char],key=tfidf[char].get,reverse=True)[:10]
+        
+    for i in range(80):
+        cat=coding[i]
+        word=words[i]
+        vals.append(tfidf[cat][word])
+        
+    df=pd.DataFrame({'category':coding,'word':words,'tfidf':vals})
+    df.to_csv('tfidf.csv',index=False)
+        
     with open('tfidf.json','w') as f:
-        json.dump(tfidf,f,indent=4)
+        json.dump(words,f,indent=4)
 
 if __name__ == '__main__':
     main()
