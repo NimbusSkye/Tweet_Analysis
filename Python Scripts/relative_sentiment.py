@@ -1,3 +1,5 @@
+# This program calculates the relative percentages of "positive", "negative", and "neutral" sentiments in each category.
+
 import pandas as pd
 import json
 import pprint

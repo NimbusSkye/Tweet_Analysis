@@ -1,3 +1,5 @@
+# This program calculates the percentages of each category relative to the total set of 1000 tweets.
+
 import pandas as pd
 import json
 import pprint

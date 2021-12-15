@@ -5,9 +5,8 @@ import json
 # To set your enviornment variables in your terminal run the following line:
 # export 'BEARER_TOKEN'='<your_bearer_token>'
 
-# See https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule for docs on rules (filters)
-# This is our template for data collection.
-# Just replace the authentication part and tweak to the rules to match our desired filter
+# This program collects new tweets related to COVID and vaccines in real-time, then exports them to a JSON file.
+# The bearer token of a developer Twitter account is needed to invoke the API calls to Twitter's Stream API.
 
 bearer_token = 'put your bearer token here'
 

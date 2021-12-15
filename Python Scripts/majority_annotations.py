@@ -1,3 +1,7 @@
+# This program takes the 3 different annotations of the data and keeps the majority.
+# For example, if 2 people label a tweet as "cs" and 1 person labels it as "cd", 
+# then the "cs" label will be kept
+
 import pandas as pd
 
 annotations_1 = "annotated_800_hamza.csv"

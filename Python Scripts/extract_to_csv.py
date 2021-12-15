@@ -2,6 +2,8 @@ import sys
 import pandas as pd
 import json
 
+# Used to extract tweets from a raw JSON file to a CSV for annotation
+
 if len(sys.argv)!=3:
     print('Incorrect # arguments. Exiting.')
     quit()
