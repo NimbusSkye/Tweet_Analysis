@@ -1,3 +1,5 @@
+# This script creates a stacked bar plot of the sentiments by category
+
 library(ggplot2)
 library(tidyverse)
 library(here)

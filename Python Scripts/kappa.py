@@ -1,3 +1,7 @@
+# This program calculates Cohens Kappa, 
+# a numerical measurement of agreement between 2 different annotations,
+# across each pair of our 3 annotations.
+
 import pandas as pd
 
 annotations_1 = "annotated_800_hamza.csv"

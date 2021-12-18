@@ -1,3 +1,5 @@
+# This script produces a series of bar plots of the top 10 words for each cateogry
+
 library(tidyverse)
 library(here)
 library(ggplot2)

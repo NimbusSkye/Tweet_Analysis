@@ -3,6 +3,7 @@ import pandas as pd
 import json
 
 # Used to extract tweets from a raw JSON file to a CSV for annotation
+# Non-ASCII characters such as emojis and non-Latin symbols are removed
 
 if len(sys.argv)!=3:
     print('Incorrect # arguments. Exiting.')

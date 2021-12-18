@@ -1,3 +1,8 @@
+# This program calculates the TFIDF of each word across the 1,000 tweets by category.
+# TFIDF measures the significance of a word to each category in which it appears.
+# Higher TFIDF values indicate that a word is more uniquely used by a category.
+# The top 10 words in a category by TFIDF summarize that category well.
+
 import pandas as pd
 import sys
 import json
